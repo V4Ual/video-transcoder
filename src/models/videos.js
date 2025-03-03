@@ -3,11 +3,11 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Videos extends Model {
+  class Video extends Model {
     static associate(models) {
     }
   }
-  Videos.init( {
+  Video.init( {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'Videos',
+    modelName: 'Video',
+    tableName:'videos'
   });
-  return Videos;
+  return Video;
 };
